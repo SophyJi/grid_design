@@ -16,18 +16,18 @@ h1, h2 {
 
   /******* style the grid container  *******/
 
-  .grid-container {
+.grid {
     /* 1. Give it a width of 800px */
     width: 800px;
   
     /* 2. Center it in the middle of the body */
-    margin: 0 auto;
+    margin: auto;
   
     /* 3. Set the display to grid */
     display: grid;
   
     /* 4. Give it 3 columns of equal size (1fr each) */
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 150px 150px 150px;
   
     /* 5. Set a grid gap of 10px */
     grid-gap: 10px;
@@ -36,18 +36,18 @@ h1, h2 {
     background-color: #91f321;
   
     /* 7. Give it a background image using the image in the images folder */
-    background-image: url('images/your_image_name.extension');
+    background-image: url('../images/background.jpg');
   
     /* 8. Add a solid black 3px border */
     border: 3px solid black;
   
     /* 9. Round the corners */
     border-radius: 10px;
-  }
+}
   
 
   /******  Style the divs inside of the grid ******/
-  .grid-container > div {
+.grid > div {
     /* 1. Give them a 5px solid white border */
     border: 5px solid white;
   
@@ -62,7 +62,7 @@ h1, h2 {
   
     /* 5. Set a font-size of 30px */
     font-size: 30px;
-  }
+}
 
 
 
@@ -74,17 +74,44 @@ h1, h2 {
 	/* justify-items:;  */
 	/* align-items:; */
 	/* align-content:; */
-  .grid-container {
-    justify-content:center ; 
+.grid {
+    justify-content:center; 
     justify-items:auto ;  
     align-items:first baseline; 
     align-content:baseline;
 }
+.item2, .item5 {
+  grid-column-start: 3;
+}
 
+.item3{
+  grid-column-start:2;
+}
 
+.item4{
+  grid-column-start:1;
+
+}
+
+.item_a{
+  grid-column-start:3;
+  grid-column-end:3;
+}
+
+.item_b{
+  grid-column-start:3;
+  grid-row-start: 1;
+}
 /* Now try and style the individual boxes using grid-column  to match the picture at 1200px.*/
-@media (min-width: 1200px) {
-    .grid-container > div:nth-child(1) {
-        grid-column: 1 / span 2;
-    }
+
+.item_c{
+  grid-row-start:2;
+}
+
+.item_d{
+  grid-row-start:2;
+} 
+.item_e{
+  grid-column-start: 3;
+  grid-row-start: 2;
 }

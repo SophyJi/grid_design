@@ -69,23 +69,3 @@ h1, h2 {
   
   
   
-  /* Go back to the parent container and play with ...*/
-      /*justify-content:; */
-      /* justify-items:;  */
-      /* align-items:; */
-      /* align-content:; */
-    .grid-container {
-      justify-content:center ; 
-      justify-items:auto ;  
-      align-items:first baseline; 
-      align-content:baseline;
-  }
-  
-  
-  /* Now try and style the individual boxes using grid-column  to match the picture at 1200px.*/
-  @media (min-width: 1200px) {
-      .grid-container > div:nth-child(1) {
-          grid-column: 1 / span 2;
-      }
-  }
-  
